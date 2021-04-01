@@ -7,8 +7,12 @@ namespace Calculator
     {
         static void Main(string[] args)
         {
-            int firstNumber = 0;
-            int secondNumber = 0;
+            MathematicalOperations sum, sub, multi, div, mod;
+            sum = new MathematicalOperations();
+            sub = new MathematicalOperations();
+            multi = new MathematicalOperations();
+            div = new MathematicalOperations();
+            mod = new MathematicalOperations();
             int choice = 0;
 
             Console.WriteLine("---Calculator---");
@@ -35,43 +39,38 @@ namespace Calculator
                     if (choice == 1)
                     {
                         Console.WriteLine("Enter with two numbers in the same line: ");
-                        string[] vet = Console.ReadLine().Split(' ');
-                        firstNumber = int.Parse(vet[0]);
-                        secondNumber = int.Parse(vet[1]);
-                        Console.WriteLine($"The sum between {firstNumber} + {secondNumber} = {firstNumber + secondNumber}");
+                        sum.A = int.Parse(Console.ReadLine());
+                        sum.B = int.Parse(Console.ReadLine());
+                        Console.WriteLine($"The sum between {sum.A} + {sum.B} = {sum.Sum()}");
                     }
                     else if (choice == 2)
                     {
                         Console.WriteLine("Enter with two numbers in the same line: ");
-                        string[] vet = Console.ReadLine().Split(' ');
-                        firstNumber = int.Parse(vet[0]);
-                        secondNumber = int.Parse(vet[1]);
-                        Console.WriteLine($"The subtraction between {firstNumber} - {secondNumber} = {firstNumber - secondNumber}");
+                        sub.A = int.Parse(Console.ReadLine());
+                        sub.B = int.Parse(Console.ReadLine());
+                        Console.WriteLine($"The subtraction between {sub.A} - {sub.B} = {sub.Sub()}");
 
                     }
                     else if (choice == 3)
                     {
                         Console.WriteLine("Enter with two numbers in the same line: ");
-                        string[] vet = Console.ReadLine().Split(' ');
-                        firstNumber = int.Parse(vet[0]);
-                        secondNumber = int.Parse(vet[1]);
-                        Console.WriteLine($"The multiplication between {firstNumber} * {secondNumber} = {firstNumber * secondNumber}");
+                        multi.A = int.Parse(Console.ReadLine());
+                        multi.B = int.Parse(Console.ReadLine());
+                        Console.WriteLine($"The multiplication between {multi.A} * {multi.B} = {multi.Multi()}");
                     }
                     else if (choice == 4)
                     {
                         Console.WriteLine("Enter with two numbers in the same line: ");
-                        string[] vet = Console.ReadLine().Split(' ');
-                        firstNumber = int.Parse(vet[0]);
-                        secondNumber = int.Parse(vet[1]);
-                        Console.WriteLine($"The divison between {firstNumber} / {secondNumber} = {firstNumber / secondNumber}");
+                        div.A = int.Parse(Console.ReadLine());
+                        div.B = int.Parse(Console.ReadLine());
+                        Console.WriteLine($"The divison between {div.A} / {div.B} = {div.Div()}");
                     }
                     else if (choice == 5)
                     {
                         Console.WriteLine("Enter with two numbers in the same line: ");
-                        string[] vet = Console.ReadLine().Split(' ');
-                        firstNumber = int.Parse(vet[0]);
-                        secondNumber = int.Parse(vet[1]);
-                        Console.WriteLine($"The rest of division between {firstNumber} % {secondNumber} = {firstNumber % secondNumber}");
+                        div.A = int.Parse(Console.ReadLine());
+                        div.B = int.Parse(Console.ReadLine());
+                        Console.WriteLine($"The rest of division between {mod.A} % {mod.B} = {mod.Mod()}");
                     }
                     else
                     {
